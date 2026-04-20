@@ -1,7 +1,7 @@
 import streamlit as st,pandas as pd,requests as r,json,io
 
 st.title("Практическая №10 (Colab)")
-u="http://127.0.0.1:8000/p"
+u="https://one23-4bfu.onrender.com/p"
 
 dx=st.sidebar.number_input("dx",0.0)
 dy=st.sidebar.number_input("dy",0.0)
