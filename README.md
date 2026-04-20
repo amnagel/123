@@ -14,7 +14,10 @@
 
 ## Математический аппарат
 Преобразование выполняется по модели подобия (7-параметрическое преобразование Гельмерта в упрощенном виде):
-$$\begin{pmatrix} X \\ Y \\ Z \end{pmatrix}_{new} = (1 + m \cdot 10^{-6}) \begin{pmatrix} 1 & \omega_z & -\omega_y \\ -\omega_z & 1 & \omega_x \\ \omega_y & -\omega_x & 1 \end{pmatrix} \begin{pmatrix} X \\ Y \\ Z \end{pmatrix}_{old} + \begin{pmatrix} dx \\ dy \\ dz \end{pmatrix}$$
+
+$$
+\begin{pmatrix} X \\ Y \\ Z \end{pmatrix}_{new} = (1 + m \cdot 10^{-6}) \begin{pmatrix} 1 & \omega_z & -\omega_y \\ -\omega_z & 1 & \omega_x \\ \omega_y & -\omega_x & 1 \end{pmatrix} \begin{pmatrix} X \\ Y \\ Z \end{pmatrix}_{old} + \begin{pmatrix} dx \\ dy \\ dz \end{pmatrix}
+$$
 
 В текущей версии интерфейса реализованы параметры линейного сдвига (dx, dy, dz) и масштабный коэффициент (m).
 
@@ -28,4 +31,3 @@ $$\begin{pmatrix} X \\ Y \\ Z \end{pmatrix}_{new} = (1 + m \cdot 10^{-6}) \begin
 * main.py — серверная часть на FastAPI (обработка файлов, логика трансформации, генерация Word).
 * app.py — клиентская часть на Streamlit (интерфейс, взаимодействие с API).
 * req.txt — список необходимых зависимостей для сборки проекта в облачных сервисах.
-
