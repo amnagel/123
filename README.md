@@ -15,10 +15,10 @@
 * Генерация документации: Pandoc (pypandoc-binary) — автоматизированная сборка отчетов в формате .docx.
 
 ## Математический аппарат
-В основе лежит матричная форма преобразования Гельмерта (модель подобия):
+Преобразование выполняется путем решения матричного уравнения связи двух систем координат:
 
 $$
-\begin{pmatrix} X \\ Y \\ Z \end{pmatrix}_{new} = (1 + m \cdot 10^{-6}) \begin{pmatrix} 1 & \omega_z & -\omega_y \\ -\omega_z & 1 & \omega_x \\ \omega_y & -\omega_x & 1 \end{pmatrix} \begin{pmatrix} X \\ Y \\ Z \end{pmatrix}_{old} + \begin{pmatrix} dx \\ dy \\ dz \end{pmatrix}
+\mathbf{V}_{target} = (1 + m \cdot 10^{-6}) \cdot \mathbf{R} \cdot \mathbf{V}_{source} + \mathbf{T}
 $$
 
 В текущей конфигурации системы доступны параметры линейного смещения (dx, dy, dz) и масштабный коэффициент (m).
